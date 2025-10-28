@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:1.29.2-alpine
+    container_name: basic-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./webpage:/usr/share/nginx/html
+    restart: unless-stopped
